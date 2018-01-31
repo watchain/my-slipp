@@ -8,7 +8,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="/webjars/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-    <title>Hello, world!</title>
+    <title>User List</title>
   </head>
   <body>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -29,35 +29,29 @@
   </div>
 </nav>
   
-    <h1>Register member</h1>
-<div class="container">
-	<form action="/create" method="post">
-	  <div class="form-group">
-	    <label for="userId">User Id</label>
-	    <input type="text" class="form-control" name="userId" placeholder="User Id">
-	  </div>
-	  <div class="form-group">
-	    <label for="exampleInputPassword1">Password</label>
-	    <input type="password" class="form-control" name="password" placeholder="Password">
-	  </div>
-	  <div class="form-group">
-	    <label for="Name">Name</label>
-	    <input type="text" class="form-control" name="name" placeholder="Name">
-	  </div>
-	  <div class="form-group">
-	    <label for="exampleInputEmail1">Email address</label>
-	    <input type="email" class="form-control" name="email1" aria-describedby="emailHelp" placeholder="Enter email">
-	    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-	  </div>
-	  <div class="form-check">
-	    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-	    <label class="form-check-label" for="exampleCheck1">Check me out</label>
-	  </div>
-	  <button type="submit" class="btn btn-primary">Submit</button>
-
-
-	</form>
-</div>
+    <div class="container">
+    	<table class="table">
+		  <thead>
+		    <tr>
+		      <th scope="col">User Id</th>
+		      <th scope="col">Name</th>
+		      <th scope="col">E-mail</th>
+		    </tr>
+		  </thead>
+		  <tbody>
+		  	{{#users}}
+		    <tr>
+		      <th scope="row">{{userId}}</th>
+		      <td>{{name}}</td>
+		      <td>{{email1}}</td>
+		    </tr>
+		    {{/users}}
+		  </tbody>
+		</table>
+    </div>
+	
+	
+	
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
