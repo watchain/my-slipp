@@ -1,1 +1,2 @@
 insert into user (user_id, password, name, email) values ('test', '1111', 'test001', 'test@yahoo.com')
+insert into user (user_id, password, name, email) values ('test00', '1111', 'test002', 'test002@yahoo.com')
