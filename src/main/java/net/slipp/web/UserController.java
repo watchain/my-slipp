@@ -48,6 +48,12 @@ public class UserController {
 
 	}
 	
+	@GetMapping("/logout")
+	public String logout(HttpSession session) {
+		session.removeAttribute("user");
+		return "redirect:/";
+	}
+	
 	
 	@PostMapping("")	
 	//public String create(String userId, String password, String name, String email) {

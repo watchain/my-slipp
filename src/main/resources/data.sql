@@ -1,0 +1,1 @@
+insert into user (user_id, password, name, email) values ('test', '1111', 'test001', 'test@yahoo.com')
